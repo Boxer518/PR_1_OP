@@ -1,0 +1,13 @@
+body {
+  margin: 0;
+  padding: 0;
+  background: #eaeaea;
+}
+
+h2 {
+  color: #333;
+}
+
+button {
+  transition: 0.2s;
+}
