@@ -1,0 +1,139 @@
+:root {
+  --bg-light: #f9fafb;
+  --text-light: #111;
+  --card-light: #fff;
+
+  --bg-dark: #0f172a;
+  --text-dark: #f1f5f9;
+  --card-dark: #1e293b;
+
+  --primary: #2563eb;
+  --danger: #dc2626;
+}
+
+.root.light {
+  background: var(--bg-light);
+  color: var(--text-light);
+}
+
+.root.dark {
+  background: var(--bg-dark);
+  color: var(--text-dark);
+}
+
+body {
+  margin: 0;
+  font-family: "Inter", sans-serif;
+}
+
+/* Header */
+.header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 20px;
+  background: var(--primary);
+  color: white;
+}
+.logo { font-weight: 700; }
+.nav a {
+  color: white;
+  text-decoration: none;
+  margin: 0 10px;
+}
+.nav a.active {
+  text-decoration: underline;
+}
+.theme-btn {
+  border: none;
+  background: none;
+  color: white;
+  font-size: 20px;
+  cursor: pointer;
+}
+
+/* Catalog */
+.page { padding: 20px; }
+.grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 16px;
+}
+.card {
+  background: var(--card-light);
+  border-radius: 10px;
+  padding: 12px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+  transition: transform 0.2s;
+}
+.root.dark .card {
+  background: var(--card-dark);
+}
+.card:hover { transform: translateY(-4px); }
+.card img {
+  width: 100%;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+.price {
+  color: var(--primary);
+  font-weight: 700;
+}
+.buttons {
+  display: flex;
+  gap: 6px;
+}
+button {
+  padding: 6px 10px;
+  border: none;
+  border-radius: 6px;
+  background: var(--primary);
+  color: white;
+  cursor: pointer;
+}
+button.secondary {
+  background: transparent;
+  border: 1px solid var(--primary);
+  color: var(--primary);
+}
+button.remove {
+  background: var(--danger);
+}
+
+/* Cart */
+.cart-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+.cart-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: var(--card-light);
+  margin-bottom: 10px;
+  padding: 10px;
+  border-radius: 8px;
+}
+.root.dark .cart-item {
+  background: var(--card-dark);
+}
+.cart-item img {
+  width: 60px;
+  height: 60px;
+  border-radius: 6px;
+  margin-right: 10px;
+}
+.info {
+  display: flex;
+  align-items: center;
+}
+.actions button {
+  margin-left: 5px;
+}
+.cart-summary {
+  margin-top: 14px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
